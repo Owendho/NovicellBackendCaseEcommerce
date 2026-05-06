@@ -19,7 +19,6 @@ builder.Services.AddSwaggerGen(options =>
 var app = builder.Build();
 
 //Make swagger development only
-//Add my own endpoints above app.MapSwagger();
 app.MapSwagger();
 
 app.UseSwagger();
@@ -29,12 +28,6 @@ app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("v1/swagger.json", "My API V1");
 });
 
-
-/*if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-}
-*/
 
 app.UseHttpsRedirection();
 

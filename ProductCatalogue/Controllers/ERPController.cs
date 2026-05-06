@@ -8,7 +8,7 @@ namespace ProductCatalogue.Controllers
     [Route("[controller]")]
     public class ERPController : ControllerBase
     {
-        //Dependency inject ERPsync
+
         private readonly ERPSync _erpSync;
 
         public ERPController(ERPSync erpSync) {
@@ -20,7 +20,7 @@ namespace ProductCatalogue.Controllers
         {
             await _erpSync.GetAsyncEcommerceProducts();
             return Ok("Got products");
-            //Save to DB
+            //Save to Database
         }
 
         [HttpPost("categories")]
@@ -28,7 +28,7 @@ namespace ProductCatalogue.Controllers
         {
             await _erpSync.GetAsyncEcommerceCategories();
             return Ok("Got Catergories");
-            //save to DB
+            //save to Database
         }
 
     }

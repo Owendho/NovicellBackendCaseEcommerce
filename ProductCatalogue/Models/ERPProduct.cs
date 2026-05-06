@@ -20,13 +20,15 @@ namespace ProductCatalogue.Models
 
         [JsonPropertyName("description")]
         public string Description { get; set; }
+
         [Required]
 
         [JsonPropertyName("category")]
         public string Category { get; set; }
+
         [Required]
 
         [JsonPropertyName("image")]
-        public string Image { get; set; } //Maybe use regex to enure it is valid link
+        public string Image { get; set; } 
     }
 }

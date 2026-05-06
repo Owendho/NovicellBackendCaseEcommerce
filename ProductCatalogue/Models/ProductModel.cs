@@ -9,6 +9,6 @@ namespace ProductCatalogue.Models
         public double Price { get; set; }
         public string Description { get; set; }
         public string Category { get; set; }
-        public string Image { get; set; } //Maybe use regex to enure it is valid link
+        public string Image { get; set; } 
     }
 }
